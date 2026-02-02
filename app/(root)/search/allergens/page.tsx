@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { Search, MapPin, UserCircle2, SlidersHorizontal, ChevronDown, Star } from 'lucide-react';
-// import { useNavigate } from 'react-router';
+import Link from 'next/link'
+
 
 const commonAllergens = [
   'Peanuts',
@@ -75,7 +76,6 @@ const mockRestaurants = [
 ];
 
 export default function SearchByAllergens() {
-//   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [selectedAllergens, setSelectedAllergens] = useState<string[]>([]);
@@ -95,12 +95,14 @@ export default function SearchByAllergens() {
       <div className="bg-white border-b border-gray-200">
         <div className="px-6 py-4 flex items-center gap-6">
           {/* DineSmart Logo */}
-          <button 
-            // onClick={() => navigate('/')}
-            className="text-2xl whitespace-nowrap hover:opacity-80 transition-opacity"
-          >
-            DineSmart
-          </button>
+          <Link href="/">
+            <button 
+              // onClick={() => navigate('/')}
+              className="cursor-pointer text-2xl whitespace-nowrap hover:opacity-80 transition-opacity"
+            >
+              DineSmart
+            </button>
+          </Link>
 
           {/* Restaurant Search Bar (Centered) */}
           <div className="flex-1 max-w-2xl mx-auto">
@@ -118,13 +120,14 @@ export default function SearchByAllergens() {
 
           {/* Right Side Actions */}
           <div className="flex items-center gap-4">
-            <button 
-            //   onClick={() => navigate('/search/location')}
-              className="flex items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-lg transition-colors whitespace-nowrap"
-            >
-              <MapPin className="size-5" />
-              <span>Search by Location</span>
-            </button>
+            <Link href="/search/location">
+              <button 
+                className="cursor-pointer flex items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-lg transition-colors whitespace-nowrap"
+              >
+                <MapPin className="size-5" />
+                <span>Search by Location</span>
+              </button>
+            </Link>
             
             <button 
             //   onClick={() => navigate('/account')}
