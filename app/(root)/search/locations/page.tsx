@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Search, MapPin, UserCircle2, Star, Minus, Plus } from 'lucide-react';
 import Link from 'next/link'
+import MapComponent from "@/components/map/MapComponent";
 
 const mockRestaurants = [
   {
@@ -78,7 +79,7 @@ const mockRestaurants = [
 ];
 
 export default function SearchByLocation() {
-  const [locationQuery, setLocationQuery] = useState('San Francisco, CA');
+  // const [locationQuery, setLocationQuery] = useState('San Francisco, CA');
   const [restaurantQuery, setRestaurantQuery] = useState('');
   const [searchRange, setSearchRange] = useState(5);
 
@@ -118,8 +119,8 @@ export default function SearchByLocation() {
                   <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 size-5 text-gray-400" />
                   <input
                     type="text"
-                    value={locationQuery}
-                    onChange={(e) => setLocationQuery(e.target.value)}
+                    // value={locationQuery}
+                    // onChange={(e) => setLocationQuery(e.target.value)}
                     placeholder="Enter location..."
                     className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:border-gray-900 focus:outline-none"
                   />
@@ -197,30 +198,26 @@ export default function SearchByLocation() {
       {/* Main Content - Map and Restaurant List */}
       <div className="flex-1 flex flex-col lg:flex-row overflow-hidden min-h-0">
         {/* Map Section - Wider Ratio */}
-        <div className="flex items-center justify-center bg-gray-100 p-3 md:p-6 lg:flex-1">
-          <div className="relative bg-gray-200 rounded-lg overflow-hidden shadow-lg w-full aspect-[4/3] lg:w-auto lg:h-full lg:aspect-[4/3]">
-            <div 
-              className="absolute inset-0 bg-cover bg-center"
-              style={{ backgroundImage: `url('https://images.unsplash.com/photo-1736117705005-84a38031251e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaXR5JTIwbWFwJTIwc3RyZWV0JTIwdmlld3xlbnwxfHx8fDE3Njk4MjQ0NDB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral')` }}
-            >
-              {/* Map Overlay */}
-              <div className="absolute inset-0 bg-black/10" />
+        <div className="flex items-center justify-center bg-gray-100 p-3 md:p-6 lg:flex-1 min-w-0">
+          <div className="relative w-full aspect-[4/3] min-h-[320px] rounded-lg overflow-hidden shadow-lg bg-gray-200">
+            <div className="absolute inset-0">
+              <MapComponent />
             </div>
             
             {/* Map Controls Placeholder */}
-            <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 bg-white rounded-lg shadow-lg p-2 md:p-3 space-y-2">
+            {/* <div className="absolute bottom-4 right-4 md:bottom-6 md:right-6 bg-white rounded-lg shadow-lg p-2 md:p-3 space-y-2">
               <button className="block p-1.5 md:p-2 hover:bg-gray-100 rounded transition-colors">+</button>
               <div className="border-t border-gray-300"></div>
               <button className="block p-1.5 md:p-2 hover:bg-gray-100 rounded transition-colors">−</button>
-            </div>
+            </div> */}
 
             {/* Location Indicator */}
-            <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-white rounded-lg shadow-lg px-3 py-1.5 md:px-4 md:py-2">
+            {/* <div className="absolute top-4 left-4 md:top-6 md:left-6 bg-white rounded-lg shadow-lg px-3 py-1.5 md:px-4 md:py-2">
               <div className="flex items-center gap-2">
                 <MapPin className="size-4 md:size-5 text-red-500" />
                 <span className="text-sm md:text-base">{locationQuery}</span>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
