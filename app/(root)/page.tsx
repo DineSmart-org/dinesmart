@@ -56,7 +56,7 @@ export default function Home() {
                 </div>
               </button>
             </Link>
-            <Link href="/search/location">
+            <Link href="/search/locations">
               <button
                 className="cursor-pointer bg-white hover:bg-white/90 text-gray-900 px-8 py-6 rounded-2xl transition-all shadow-lg hover:shadow-xl min-w-[240px]"
               >

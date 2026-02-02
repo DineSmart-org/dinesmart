@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Search, MapPin, UserCircle2, Star, Minus, Plus } from 'lucide-react';
-// import { useNavigate } from 'react-router';
+import Link from 'next/link'
 
 const mockRestaurants = [
   {
@@ -78,7 +78,6 @@ const mockRestaurants = [
 ];
 
 export default function SearchByLocation() {
-//   const navigate = useNavigate();
   const [locationQuery, setLocationQuery] = useState('San Francisco, CA');
   const [restaurantQuery, setRestaurantQuery] = useState('');
   const [searchRange, setSearchRange] = useState(5);
@@ -102,12 +101,13 @@ export default function SearchByLocation() {
       <div className="bg-white border-b border-gray-200 flex-shrink-0">
         <div className="px-6 py-4 flex items-center gap-6">
           {/* DineSmart Logo */}
-          <button 
-            onClick={() => navigate('/')}
-            className="text-2xl whitespace-nowrap hover:opacity-80 transition-opacity"
-          >
-            DineSmart
-          </button>
+          <Link href="/">
+            <button
+              className="cursor-pointer text-2xl whitespace-nowrap hover:opacity-80 transition-opacity"
+            >
+              DineSmart
+            </button>
+          </Link>
 
           {/* Search Fields Container - Centered */}
           <div className="flex-1 flex items-center justify-center">
@@ -144,19 +144,22 @@ export default function SearchByLocation() {
 
           {/* Right Side Actions */}
           <div className="flex items-center gap-4">
-            <button 
-              onClick={() => navigate('/search/allergens')}
-              className="px-4 py-2 hover:bg-gray-100 rounded-lg transition-colors whitespace-nowrap"
-            >
-              Search by Allergens
-            </button>
+            <Link href="/search/allergens">
+              <button
+                className="cursor-pointer px-4 py-2 hover:bg-gray-100 rounded-lg transition-colors whitespace-nowrap"
+              >
+                Search by Allergens
+              </button>
+            </Link>
             
-            <button 
-              onClick={() => navigate('/account')}
-              className="hover:bg-gray-100 p-2 rounded-lg transition-colors"
-            >
-              <UserCircle2 className="size-8" />
-            </button>
+            <Link href="/account">
+              <button
+                className="cursor-pointer hover:bg-gray-100 p-2 rounded-lg transition-colors"
+              >
+                <UserCircle2 className="size-8" />
+              </button>
+            </Link>
+            
           </div>
         </div>
       </div>
