@@ -9,7 +9,10 @@ By: Racquell Grey and Logan Kemprowksi
 Our team started the project by identifying a real-world problem and brainstorming solutions. We defined key features, selected the technology stack, and mapped out site navigation. We created 16 low-fidelity prototypes to explore the user experience, set up our GitHub repository, and chose our project name, icon, and logo.
 
 ### 01/31/26
-Infrastructure setup day. We took the wireframes from yesterday and turned them into high-fidelity prototypes. Still doing a lot of research on what tech to use.
+Infrastructure setup day. We took the wireframes from yesterday and turned them into high-fidelity prototypes. Still doing a lot of research on what tech to use. Created 16 new low-fidelity prototypes for account and about pages.
+
+### 02/01/26
+Began implementation of location and about page. Researched options on map api integration. Began to hook up routing between pages.
 
 ------------------------------------------------------
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
