@@ -44,7 +44,7 @@ export default function FAQ() {
         <div className="px-6 py-4 flex items-center justify-between">
           {" "}
           <Link
-            href="/Home"
+            href="/"
             className="text-2xl font-medium hover:opacity-80 transition-opacity"
           >
             {" "}
