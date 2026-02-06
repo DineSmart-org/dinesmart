@@ -1,8 +1,7 @@
 import { Hamburger, MapPin } from 'lucide-react';
-// import { useNavigate } from 'react-router';
+import Link from 'next/link'
 
 export default function Home() {
-  // const navigate = useNavigate();
 
   return (
     <div className="relative min-h-dvh w-full">
@@ -20,15 +19,15 @@ export default function Home() {
         {/* Navigation Bar */}
         <nav className="p-6">
           <div className="flex gap-8 justify-end">
-            <a href="/about" className="text-white hover:text-white/80 transition-colors">
+            <Link href="/about" className="text-white hover:text-white/80 transition-colors">
               About
-            </a>
-            <a href="/faq" className="text-white hover:text-white/80 transition-colors">
+            </Link>
+            <Link href="/faq" className="text-white hover:text-white/80 transition-colors">
               FAQ
-            </a>
-            <a href="/account" className="text-white hover:text-white/80 transition-colors">
+            </Link>
+            <Link href="/account" className="text-white hover:text-white/80 transition-colors">
               Account
-            </a>
+            </Link>
           </div>
         </nav>
 
@@ -46,24 +45,27 @@ export default function Home() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-6">
-            <button 
-              // onClick={() => navigate('/search/allergens')}
-              className="bg-white hover:bg-white/90 text-gray-900 px-8 py-6 rounded-2xl transition-all shadow-lg hover:shadow-xl min-w-[240px]"
-            >
-              <div className="flex items-center justify-center gap-3">
-                <Hamburger className="size-6" />
-                <span className="text-lg">Search by Allergens</span>
-              </div>
-            </button>
-            <button 
-              // onClick={() => navigate('/search/location')}
-              className="bg-white hover:bg-white/90 text-gray-900 px-8 py-6 rounded-2xl transition-all shadow-lg hover:shadow-xl min-w-[240px]"
-            >
-              <div className="flex items-center justify-center gap-3">
-                <MapPin className="size-6" />
-                <span className="text-lg">Search by Location</span>
-              </div>
-            </button>
+            <Link href="/search/allergens">
+              <button 
+                className="cursor-pointer bg-white hover:bg-white/90 text-gray-900 px-8 py-6 rounded-2xl transition-all shadow-lg hover:shadow-xl min-w-[240px]"
+              >
+                <div className="flex items-center justify-center gap-3">
+                  <Hamburger className="size-6" />
+                    <span className="text-lg">Search by Allergens</span>
+                  
+                </div>
+              </button>
+            </Link>
+            <Link href="/search/locations">
+              <button
+                className="cursor-pointer bg-white hover:bg-white/90 text-gray-900 px-8 py-6 rounded-2xl transition-all shadow-lg hover:shadow-xl min-w-[240px]"
+              >
+                <div className="flex items-center justify-center gap-3">
+                  <MapPin className="size-6" />
+                  <span className="text-lg">Search by Location</span>
+                </div>
+              </button>
+            </Link>
           </div>
         </div>
       </div>
