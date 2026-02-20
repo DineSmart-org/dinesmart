@@ -112,13 +112,13 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             {/* Text Left */}
             <div>
-              <h2 className="text-6xl mb-8 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+              <h2 className="text-6xl mb-8 bg-gradient-to-r from-[#1e3a5f] to-[#17a2b8] bg-clip-text text-transparent">
                 Our Mission
               </h2>
-              <p className="text-2xl text-gray-700 leading-relaxed mb-6 font-light">
+              <p className="text-2xl text-[#17a2b8] leading-relaxed mb-6 font-light">
                 Empowering individuals with food allergies to dine out with confidence and peace of mind.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed font-light">
+              <p className="text-lg text-[#1e3a5f] leading-relaxed font-light">
                 We believe everyone deserves to enjoy eating out without fear or anxiety. Through our 
                 platform, we're making dining accessible and safe for all.
               </p>
@@ -151,30 +151,30 @@ export default function About() {
 
             {/* Text Right */}
             <div>
-              <h2 className="text-6xl mb-8 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+              <h2 className="text-6xl mb-8 bg-gradient-to-r from-[#17a2b8] to-[#1e3a5f] bg-clip-text text-transparent">
                 What We Do
               </h2>
-              <p className="text-2xl text-gray-700 leading-relaxed mb-8 font-light">
+              <p className="text-2xl text-[#1e3a5f] leading-relaxed mb-8 font-light">
                 Connecting you with restaurants that understand and accommodate food allergies.
               </p>
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-3xl mb-3 text-gray-900">Search by Allergens</h3>
-                  <p className="text-gray-600 font-light leading-relaxed">
+                  <h3 className="text-3xl mb-3 text-[#17a2b8]">Search by Allergens</h3>
+                  <p className="text-[#1e3a5f] font-light leading-relaxed">
                     Filter restaurants based on specific allergens you need to avoid. Find safe dining 
                     options tailored to your dietary needs.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-3xl mb-3 text-gray-900">Search by Location</h3>
-                  <p className="text-gray-600 font-light leading-relaxed">
+                  <h3 className="text-3xl mb-3 text-[#17a2b8]">Search by Location</h3>
+                  <p className="text-[#1e3a5f] font-light leading-relaxed">
                     Discover allergy-friendly restaurants near you with detailed allergen information 
                     and community ratings.
                   </p>
                 </div>
                 <div>
-                  <h3 className="text-3xl mb-3 text-gray-900">Verified Information</h3>
-                  <p className="text-gray-600 font-light leading-relaxed">
+                  <h3 className="text-3xl mb-3 text-[#17a2b8]">Verified Information</h3>
+                  <p className="text-[#1e3a5f] font-light leading-relaxed">
                     Access reliable, up-to-date allergen data provided by restaurants and verified 
                     by our community.
                   </p>
@@ -191,19 +191,19 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-16 items-center">
             {/* Text Left */}
             <div>
-              <h2 className="text-6xl mb-8 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+              <h2 className="text-6xl mb-8 bg-gradient-to-r from-[#1e3a5f] to-[#17a2b8] bg-clip-text text-transparent">
                 About Us
               </h2>
-              <p className="text-2xl text-gray-700 leading-relaxed mb-6 font-light">
+              <p className="text-2xl text-[#17a2b8] leading-relaxed mb-6 font-light">
                 Born from a simple yet powerful idea: dining out should be safe and enjoyable for 
                 everyone.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed mb-6 font-light">
+              <p className="text-lg text-[#1e3a5f] leading-relaxed mb-6 font-light">
                 We understand the challenges that come with food allergies because our team has lived 
                 through them. From reading ingredient lists to asking detailed questions at restaurants, 
                 we know the stress that can accompany a simple meal out.
               </p>
-              <p className="text-lg text-gray-600 leading-relaxed font-light">
+              <p className="text-lg text-[#1e3a5f] leading-relaxed font-light">
                 Founded in 2024, DineSmart emerged from personal experiences and the realization that 
                 there had to be a better way. Today, we're building a community-driven platform that 
                 makes dining out stress-free.
@@ -225,17 +225,17 @@ export default function About() {
       {/* Contact Form Section */}
       <section id="contact" className="py-16 px-6 bg-gray-50">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-4xl mb-3 text-center bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl mb-3 text-center bg-gradient-to-r from-[#17a2b8] to-[#1e3a5f] bg-clip-text text-transparent">
             Get In Touch
           </h2>
-          <p className="text-lg text-gray-700 text-center mb-8 font-light">
+          <p className="text-lg text-[#17a2b8] text-center mb-8 font-light">
             Have questions or feedback? We'd love to hear from you!
           </p>
           
           <div className="bg-white rounded-2xl shadow-xl p-6">
             <form className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm mb-1 text-gray-700">
+                <label htmlFor="name" className="block text-sm mb-1 text-[#1e3a5f]">
                   Name
                 </label>
                 <input
@@ -247,7 +247,7 @@ export default function About() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm mb-1 text-gray-700">
+                <label htmlFor="email" className="block text-sm mb-1 text-[#1e3a5f]">
                   Email
                 </label>
                 <input
@@ -259,7 +259,7 @@ export default function About() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm mb-1 text-gray-700">
+                <label htmlFor="message" className="block text-sm mb-1 text-[#1e3a5f]">
                   Message
                 </label>
                 <textarea
@@ -272,7 +272,7 @@ export default function About() {
 
               <button
                 type="submit"
-                className="w-full bg-gray-900 text-white py-2.5 rounded-lg hover:bg-gray-800 transition-all shadow-md hover:shadow-lg"
+                className="w-full bg-[#1e3a5f] text-white py-2.5 rounded-lg hover:bg-[#264B79] transition-all shadow-md hover:shadow-lg"
               >
                 Send Message
               </button>
