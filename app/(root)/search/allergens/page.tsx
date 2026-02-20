@@ -1,9 +1,8 @@
-"use client";
-
+"use client"
 import { useState } from 'react';
 import { Search, MapPin, UserCircle2, SlidersHorizontal, ChevronDown, Star } from 'lucide-react';
-import Link from 'next/link'
-
+import Link from 'next/link';
+import {Navigation} from '@/components/Navigation';
 
 const commonAllergens = [
   'Peanuts',
@@ -92,17 +91,42 @@ export default function SearchByAllergens() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Top Navigation Bar */}
+      <Navigation />
+      {/* Filter and Sort Controls */}
       <div className="bg-white border-b border-gray-200">
-        <div className="px-6 py-4 flex items-center gap-6">
-          {/* DineSmart Logo */}
-          <Link href="/">
-            <button
-              className="cursor-pointer text-2xl whitespace-nowrap hover:opacity-80 transition-opacity"
+        <div className="px-6 py-4 max-w-7xl mx-auto flex items-center gap-6">
+        <div className="px-6 py-4">
+        <div className="flex items-center justify-center gap-4">
+          <button 
+            onClick={() => setIsFilterOpen(!isFilterOpen)}
+            className={`flex items-center gap-2 px-6 py-2 rounded-lg border-2 transition-all ${
+              isFilterOpen ? 'border-gray-900 bg-gray-900 text-white' : 'border-gray-300 hover:border-gray-400'
+            }`}
+          >
+            <SlidersHorizontal className="size-5" />
+            <span>Filter</span>
+            {selectedAllergens.length > 0 && (
+              <span className="ml-1 px-2 py-0.5 bg-white text-gray-900 rounded-full text-sm">
+                {selectedAllergens.length}
+              </span>
+            )}
+          </button>
+          {/* Search and Action Bar */}
+          <div className="relative">
+            <select
+              value={sortBy}
+              onChange={(e) => setSortBy(e.target.value)}
+              className="appearance-none pl-4 pr-10 py-2 border-2 border-gray-300 rounded-lg focus:border-gray-900 focus:outline-none cursor-pointer hover:border-gray-400 transition-colors"
             >
-              DineSmart
-            </button>
-          </Link>
-
+              <option value="recommended">Sort by: Recommended</option>
+              <option value="rating">Sort by: Rating</option>
+              <option value="distance">Sort by: Distance</option>
+              <option value="name">Sort by: Name</option>
+            </select>
+            <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 size-5 text-gray-400 pointer-events-none" />
+          </div>
+        </div>
+      </div>
           {/* Restaurant Search Bar (Centered) */}
           <div className="flex-1 max-w-2xl mx-auto">
             <div className="relative">
@@ -119,56 +143,14 @@ export default function SearchByAllergens() {
 
           {/* Right Side Actions */}
           <div className="flex items-center gap-4">
-            <Link href="/search/locations">
-              <button 
+          <Link href="/search/locations">
+              <button
                 className="cursor-pointer flex items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-lg transition-colors whitespace-nowrap"
               >
                 <MapPin className="size-5" />
                 <span>Search by Location</span>
               </button>
             </Link>
-            
-            <Link href="/account">
-              <button
-                className="cursor-pointer hover:bg-gray-100 p-2 rounded-lg transition-colors"
-              >
-                <UserCircle2 className="size-8" />
-              </button>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Filter and Sort Controls */}
-      <div className="bg-white border-b border-gray-200 px-6 py-4">
-        <div className="flex items-center justify-center gap-4">
-          <button 
-            onClick={() => setIsFilterOpen(!isFilterOpen)}
-            className={`flex items-center gap-2 px-6 py-2 rounded-lg border-2 transition-all ${
-              isFilterOpen ? 'border-gray-900 bg-gray-900 text-white' : 'border-gray-300 hover:border-gray-400'
-            }`}
-          >
-            <SlidersHorizontal className="size-5" />
-            <span>Filter</span>
-            {selectedAllergens.length > 0 && (
-              <span className="ml-1 px-2 py-0.5 bg-white text-gray-900 rounded-full text-sm">
-                {selectedAllergens.length}
-              </span>
-            )}
-          </button>
-
-          <div className="relative">
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="appearance-none pl-4 pr-10 py-2 border-2 border-gray-300 rounded-lg focus:border-gray-900 focus:outline-none cursor-pointer hover:border-gray-400 transition-colors"
-            >
-              <option value="recommended">Sort by: Recommended</option>
-              <option value="rating">Sort by: Rating</option>
-              <option value="distance">Sort by: Distance</option>
-              <option value="name">Sort by: Name</option>
-            </select>
-            <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 size-5 text-gray-400 pointer-events-none" />
           </div>
         </div>
       </div>

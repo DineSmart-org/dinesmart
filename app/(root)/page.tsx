@@ -1,5 +1,6 @@
 import { Hamburger, MapPin } from 'lucide-react';
-import Link from 'next/link'
+import {Navigation} from '@/components/Navigation';
+import Link from 'next/link';
 
 export default function Home() {
 
@@ -16,20 +17,7 @@ export default function Home() {
 
       {/* Content */}
       <div className="relative z-10 min-h-dvh w-full flex flex-col">
-        {/* Navigation Bar */}
-        <nav className="p-6">
-          <div className="flex gap-8 justify-end">
-            <Link href="/about" className="text-white hover:text-white/80 transition-colors">
-              About
-            </Link>
-            <Link href="/faq" className="text-white hover:text-white/80 transition-colors">
-              FAQ
-            </Link>
-            <Link href="/account" className="text-white hover:text-white/80 transition-colors">
-              Account
-            </Link>
-          </div>
-        </nav>
+      <Navigation />
 
         {/* Hero Section */}
         <div className="flex-1 flex flex-col items-center justify-center px-6 pb-20">

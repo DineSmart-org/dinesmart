@@ -33,7 +33,7 @@ export default function AccountLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          <header className="flex justify-end items-center p-4 gap-4 h-16">
+          
             <SignedOut>
               <Link
                 href="/account/sign-in"
@@ -49,9 +49,7 @@ export default function AccountLayout({
               </Link>
             </SignedOut>
             <SignedIn>
-              <UserButton />
             </SignedIn>
-          </header>
           {children}
         </body>
       </html>

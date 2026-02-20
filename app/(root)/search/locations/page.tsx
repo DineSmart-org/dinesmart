@@ -1,7 +1,7 @@
 "use client";
-
+import {Navigation} from '@/components/Navigation';
 import { useState } from "react";
-import { Search, MapPin, UserCircle2, Star, Minus, Plus } from "lucide-react";
+import { Search, MapPin, UserCircle2, Star, Minus, Plus, Wheat } from "lucide-react";
 import Link from "next/link";
 import MapComponent, { NearbyRestaurant } from "@/components/map/MapComponent";
 
@@ -25,15 +25,9 @@ export default function SearchByLocation() {
   return (
     <div className="h-dvh bg-gray-50 flex flex-col overflow-hidden">
       {/* Top Navigation Bar */}
+      <Navigation />
       <div className="bg-white border-b border-gray-200 flex-shrink-0">
         <div className="px-6 py-4 flex items-center gap-6">
-          {/* DineSmart Logo */}
-          <Link href="/">
-            <button className="cursor-pointer text-2xl whitespace-nowrap hover:opacity-80 transition-opacity">
-              DineSmart
-            </button>
-          </Link>
-
           {/* Search Fields Container - Centered */}
           <div className="flex-1 flex items-center justify-center">
             <div className="flex items-center gap-4 w-full max-w-3xl">
@@ -67,25 +61,8 @@ export default function SearchByLocation() {
             </div>
           </div>
 
-          {/* Right Side Actions */}
-          <div className="flex items-center gap-4">
-            <Link href="/search/allergens">
-              <button className="cursor-pointer px-4 py-2 hover:bg-gray-100 rounded-lg transition-colors whitespace-nowrap">
-                Search by Allergens
-              </button>
-            </Link>
-
-            <Link href="/account">
-              <button className="cursor-pointer hover:bg-gray-100 p-2 rounded-lg transition-colors">
-                <UserCircle2 className="size-8" />
-              </button>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Search Range Control */}
-      <div className="bg-white border-b border-gray-200 px-6 py-4 flex-shrink-0">
+          {/* Search Range Control */}
+      <div className="bg-white px-6 py-4 flex-shrink-0">
         <div className="flex items-center justify-center gap-4 flex-wrap">
           <span className="text-gray-700">Search Range:</span>
           <button
@@ -111,6 +88,20 @@ export default function SearchByLocation() {
             onChange={(e) => setSearchRange(Number(e.target.value))}
             className="w-32 sm:w-48 md:w-64 accent-gray-900"
           />
+        </div>
+      </div>
+
+          {/* Right Side Actions */}
+          <div className="flex items-center gap-4">
+          <Link href="/search/allergens">
+              <button
+                className="cursor-pointer flex items-center gap-2 px-4 py-2 hover:bg-gray-100 rounded-lg transition-colors whitespace-nowrap"
+              >
+                <Wheat className="size-5" />
+                <span>Search by Allergens</span>
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
 
