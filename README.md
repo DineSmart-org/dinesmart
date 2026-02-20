@@ -26,6 +26,9 @@ The Account page was merged into main. More issue tickets were made. Fixed the A
 ### 02/19/2026
 Meeting held to review where we are at, any blockers, what we want to get done, and our next steps. This involved talking about page functionality, our current issues (outside of Github issues), our goal, deadlines, and much more.
 
+### 02/20/2026
+Implemented google maps integration with geolocation and updating list of nearby restaurants. Created a header component and implemented it sitewide. Updating subheader for search by allergen + location. Created logo and started updating the final color scheme.
+
 
 ------------------------------------------------------
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
