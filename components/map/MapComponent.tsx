@@ -41,8 +41,7 @@ export default function MapComponent({
     const initMap = () => {
       const g = (window as any).google;
       if (!g?.maps || mapRef.current) return;
-
-      const fallback = { lat: 37.7749, lng: -122.4194 };
+      const fallback = { lat: 37.2301, lng: 80.4151 };
 
       mapRef.current = new g.maps.Map(divRef.current, {
         center: fallback,
