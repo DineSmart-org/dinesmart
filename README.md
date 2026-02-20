@@ -14,6 +14,19 @@ Infrastructure setup day. We took the wireframes from yesterday and turned them 
 ### 02/01/26
 Began implementation of location and about page. Researched options on map api integration. Began to hook up routing between pages.
 
+### 02/02/2026
+Accomplished creating and finished the About page. Design was started for the Account page. 
+
+### 02/03/2026
+Account page has been created. Moved onto researching Clerk and setting it up in for our site. Finally, the FAQ Page was created and started.
+
+### 02/06/2026
+The Account page was merged into main. More issue tickets were made. Fixed the About page issue of it not showing up.
+
+### 02/19/2026
+Meeting held to review where we are at, any blockers, what we want to get done, and our next steps. This involved talking about page functionality, our current issues (outside of Github issues), our goal, deadlines, and much more.
+
+
 ------------------------------------------------------
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
