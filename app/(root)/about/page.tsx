@@ -1,4 +1,5 @@
 'use client';
+import {Navigation} from '@/components/Navigation';
 
 import { useState, useEffect } from 'react';
 // import { Navigation } from '../components/Navigation';
@@ -42,29 +43,7 @@ export default function About() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/70" />
 
         {/* Transparent Navigation */}
-        <div className="absolute top-0 left-0 right-0 z-50">
-          <div className="p-6">
-            <div className="flex items-center justify-between">
-              <button 
-                onClick={() => window.location.href = '/'}
-                className="text-2xl text-white hover:opacity-80 transition-opacity"
-              >
-                DineSmart
-              </button>
-              <div className="flex gap-8">
-                <a href="/about" className="text-white hover:opacity-80 transition-opacity">
-                  About
-                </a>
-                <a href="/faq" className="text-white hover:opacity-80 transition-opacity">
-                  FAQ
-                </a>
-                <a href="/account" className="text-white hover:opacity-80 transition-opacity">
-                  Account
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Navigation />
 
         {/* Content Container */}
         <div className="relative h-full flex flex-col items-center justify-center px-6">

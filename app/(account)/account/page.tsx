@@ -1,4 +1,5 @@
 "use client";
+import {Navigation} from '@/components/Navigation';
 
 import { useState } from 'react';
 import Link from 'next/link';
@@ -68,24 +69,7 @@ export default function Account() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-white border-b border-gray-200">
-        <div className="px-6 py-4 flex items-center justify-between">
-          <Link href="/Home" className="text-2xl font-medium hover:opacity-80 transition-opacity">
-            DineSmart
-          </Link>
-          <nav className="flex gap-8">
-            <Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">
-              About
-            </Link>
-            <Link href="/faq" className="text-gray-600 hover:text-gray-900 transition-colors">
-              FAQ
-            </Link>
-            <Link href="/account" className="text-gray-900 font-medium">
-              Account
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Navigation />
 
       <div className="max-w-4xl mx-auto px-6 py-12">
         {/* Profile Header */}
