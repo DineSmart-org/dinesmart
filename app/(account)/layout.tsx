@@ -32,24 +32,7 @@ export default function AccountLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          
-            <SignedOut>
-              <Link
-                href="/account/sign-in"
-                className="text-sm sm:text-base font-medium text-gray-700 hover:text-gray-900 transition-colors"
-              >
-                Sign In
-              </Link>
-              <Link
-                href="/account/sign-up"
-                className="bg-[#6c47ff] text-white rounded-full font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 flex items-center justify-center cursor-pointer hover:bg-[#5a3ae6] transition-colors"
-              >
-                Sign Up
-              </Link>
-            </SignedOut>
-            <SignedIn>
-            </SignedIn>
+        <body>
           {children}
         </body>
       </html>
