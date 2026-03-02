@@ -29,6 +29,15 @@ Meeting held to review where we are at, any blockers, what we want to get done, 
 ### 02/20/2026
 Implemented google maps integration with geolocation and updating list of nearby restaurants. Created a header component and implemented it sitewide. Updating subheader for search by allergen + location. Created logo and started updating the final color scheme.
 
+### 02/21/26
+Created a customized login and sign up page with the ability to navigate back to home.
+
+### 02/22/26
+Updated environment files and keys. Closed out a few issue tickets. Assigned footer work.
+
+### 03/02/26
+New footer component created and implemented across About, FAQ, and Account Page. Created new tickets. Dealt with scam/hacker issue as well.
+
 
 ------------------------------------------------------
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
