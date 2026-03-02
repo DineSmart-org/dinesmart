@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import {Navigation} from '@/components/Navigation';
+import {Footer} from '@/components/Footer';
 
 const faqs = [
   {
@@ -77,6 +78,7 @@ export default function FAQ() {
           </button>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }
