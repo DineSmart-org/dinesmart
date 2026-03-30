@@ -1,5 +1,6 @@
 "use client";
 import {Navigation} from '@/components/Navigation';
+import {Footer} from '@/components/Footer';
 
 import { useState } from 'react';
 import Link from 'next/link';
@@ -165,32 +166,7 @@ export default function Account() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 px-6 mt-12">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            {/* Brand */}
-            <div>
-              <h3 className="text-xl">DineSmart</h3>
-            </div>
-
-            {/* Contact Info */}
-            <div className="flex gap-8 text-sm text-gray-400">
-              <a href="mailto:hello@dinesmart.com" className="flex items-center gap-2 hover:text-white transition-colors">
-                <Mail className="size-4" />
-                hello@dinesmart.com
-              </a>
-              <a href="tel:+15551234567" className="flex items-center gap-2 hover:text-white transition-colors">
-                <Phone className="size-4" />
-                (555) 123-4567
-              </a>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-6 pt-6 text-center text-gray-500 text-xs">
-            <p>&copy; 2026 DineSmart. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 }

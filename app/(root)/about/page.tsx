@@ -1,5 +1,6 @@
 'use client';
 import {Navigation} from '@/components/Navigation';
+import {Footer} from '@/components/Footer'
 
 import { useState, useEffect } from 'react';
 // import { Navigation } from '../components/Navigation';
@@ -293,53 +294,7 @@ export default function About() {
       )}
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-6 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-6 mb-4">
-            {/* Brand & Tagline */}
-            <div>
-              <h3 className="text-xl mb-2">DineSmart</h3>
-              <p className="text-gray-400 text-sm">
-                Making dining safe and accessible for everyone with food allergies.
-              </p>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-sm mb-2">Quick Links</h4>
-              <ul className="space-y-1 text-sm text-gray-400">
-                <li><button onClick={() => scrollToSection('mission')} className="hover:text-white transition-colors">Mission</button></li>
-                <li><button onClick={() => scrollToSection('purpose')} className="hover:text-white transition-colors">What We Do</button></li>
-                <li><button onClick={() => scrollToSection('about')} className="hover:text-white transition-colors">About</button></li>
-                <li><button onClick={() => scrollToSection('contact')} className="hover:text-white transition-colors">Contact</button></li>
-              </ul>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h4 className="text-sm mb-2">Contact</h4>
-              <div className="space-y-1 text-sm text-gray-400">
-                <div className="flex items-center gap-2">
-                  <Mail className="size-3" />
-                  <a href="mailto:hello@dinesmart.com" className="hover:text-white transition-colors">
-                    hello@dinesmart.com
-                  </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Phone className="size-3" />
-                  <a href="tel:+15551234567" className="hover:text-white transition-colors">
-                    (555) 123-4567
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 pt-3 text-center text-gray-500 text-xs">
-            <p>&copy; 2026 DineSmart. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 }
